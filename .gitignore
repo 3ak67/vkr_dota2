@@ -13,7 +13,13 @@
 !/log/.keep
 !/tmp/.keep
 
+/public/*
+!/public/dota_bin.csv
+
 /node_modules
 /yarn-error.log
 
 .byebug_history
+
+# RubyMine files
+.idea
