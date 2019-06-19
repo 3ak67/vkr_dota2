@@ -4,7 +4,7 @@ class GameMatrix
   attr_accessor :available_heroes, :matrix, :picked_heroes, :best_pick
 
   def initialize(available_heroes, picked_heroes)
-    @heroes = Hero.all
+    @heroes = Hero.all.map { |h| h.hero_id }
     @available_heroes = available_heroes
     @picked_heroes = picked_heroes
     @matrix = []
@@ -44,9 +44,9 @@ class GameMatrix
   def build_x_row(radiant, dire)
     row = []
     @heroes.each do |hero|
-      if radiant.include?(hero.hero_id)
+      if radiant.include?(hero)
         row << 1
-      elsif dire.include?(hero.hero_id)
+      elsif dire.include?(hero)
         row << -1
       else
         row << 0
