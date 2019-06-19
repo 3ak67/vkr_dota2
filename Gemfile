@@ -30,6 +30,7 @@ end
 group :development do
   gem 'annotate'
   gem 'awesome_print'
+  gem 'bullet'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry'
   gem 'spring'
