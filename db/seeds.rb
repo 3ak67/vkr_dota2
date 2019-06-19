@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# ### Classifier
-# ds = LoadDatasetService.new
-# cl = Rumale::LinearModel::LogisticRegression.new(reg_param: 0.01, n_jobs: 5)
-# cl.fit(ds.csv_x, ds.csv_y)
-# File.open('classifier.dat', 'wb') { |f| f.write(Marshal.dump(cl)) }
-# LoadHeroesService.new
+### Classifier
+ds = LoadDatasetService.new
+cl = Rumale::LinearModel::LogisticRegression.new(reg_param: 0.01, n_jobs: 5)
+cl.fit(ds.csv_x, ds.csv_y)
+File.open('classifier.dat', 'wb') { |f| f.write(Marshal.dump(cl)) }
+LoadHeroesService.new
 
 
 ## Heroes Icons
