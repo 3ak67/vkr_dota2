@@ -1,5 +1,5 @@
 class LoadHeroesService
-  FILE_PATH = 'public/115_heroes.csv'
+  FILE_PATH = '115_heroes.csv'
 
   attr_accessor :file, :csv
 

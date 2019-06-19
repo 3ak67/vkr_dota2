@@ -1,6 +1,6 @@
 class LoadDatasetService
-  X_PATH = 'public/dota_x.csv'.freeze
-  Y_PATH = 'public/dota_y.csv'.freeze
+  X_PATH = 'dota_x.csv'.freeze
+  Y_PATH = 'dota_y.csv'.freeze
 
   attr_accessor :csv_y, :csv_x
 
