@@ -4,7 +4,7 @@ class LogReg
   attr_reader :model
 
   def initialize
-    @model = Marshal.load(File.binread('tmp/classifier.dat'))
+    @model = Marshal.load(File.binread('classifier.dat'))
   end
 
   def predict(x)
