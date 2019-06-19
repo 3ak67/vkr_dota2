@@ -1,4 +1,16 @@
 .row
+  - @picked[0..3].each do |p|
+    .col-xs-1
+      .thumbnail
+        = image_tag asset_url("dota_hero_icons/#{p.portrait}")
+  .col-xs-4
+  - @picked[4..7].each do |p|
+    .col-xs-1
+      .thumbnail
+        = image_tag asset_url("dota_hero_icons/#{p.portrait}")
+
+
+.row
   - @best_heroes.each_with_index do |hero, i|
     .col-sm-4.col-md-3
       .thumbnail

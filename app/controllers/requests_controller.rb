@@ -17,6 +17,7 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @picked = Hero.where("hero_id IN (?)", @request.hero_pick_ids)
     @game_matrix = @request.build_matrix
     @antagonistic_heroes = Hero.where("hero_id IN (?)", @game_matrix.available_heroes)
     # For best pick
