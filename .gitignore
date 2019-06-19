@@ -12,12 +12,14 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/classifier.dat
 
 /public/*
 !/public/dota_bin.csv
 !/public/dota_x.csv
 !/public/dota_y.csv
 !/public/115_heroes.csv
+!/public/classifier.dat
 
 /node_modules
 /yarn-error.log

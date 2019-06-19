@@ -14,13 +14,6 @@ class Request < ApplicationRecord
   def hero_pick_ids
     [r1, r2, r3, r4, d1, d2, d3, d4].map { |i| i.to_i }
   end
-
-  def offering_picks
-    mx = @matrix.matrix.to_a
-    mx.each do |m|
-
-    end
-  end
 end
 
 
