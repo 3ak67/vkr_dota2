@@ -1,0 +1,52 @@
+/ table.table.table-bordered
+/   thead
+/     tr
+/       th
+/       - @antagonistic_heroes.each do |hero|
+/         th
+/           = hero.localized_name
+/   tbody
+/     - @antagonistic_heroes.each_with_index do |hero, i|
+/       tr
+/         th
+/           = hero.localized_name
+/         - @game_matrix.matrix.to_a[i].each do |mx|
+/           td
+/             = "%0.2f" % [mx]
+
+
+.row
+  - @best_heroes.each_with_index do |hero, i|
+    .col-sm-4.col-md-3
+      .thumbnail
+        = image_tag hero.portrait_url
+        .caption
+          h3
+            = hero.localized_name
+          p
+            | Приоритет: #{@scores[i]} / 115
+          / p
+          /   a.btn.btn-primary href="#" role="button"  Button
+          /   a.btn.btn-default href="#" role="button"  Button
+
+button.btn.btn-primary aria-controls="collapseExample" aria-expanded="false" data-target="#collapseExample" data-toggle="collapse" type="button"
+  | Матрицы игры
+br
+#collapseExample.collapse
+  .row
+    .table-responsive
+      table.table.table-bordered#table1
+        thead
+          tr
+            th
+            - @antagonistic_heroes.each do |hero|
+              th
+                = hero.localized_name
+        tbody
+          - @antagonistic_heroes.each_with_index do |hero, i|
+            tr
+              th
+                = hero.localized_name
+              - @game_matrix.matrix.to_a[i].each do |mx|
+                td
+                  = "%0.2f" % [mx]

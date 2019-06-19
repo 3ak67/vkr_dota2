@@ -15,6 +15,9 @@
 
 /public/*
 !/public/dota_bin.csv
+!/public/dota_x.csv
+!/public/dota_y.csv
+!/public/115_heroes.csv
 
 /node_modules
 /yarn-error.log

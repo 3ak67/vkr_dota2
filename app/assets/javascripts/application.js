@@ -9,7 +9,22 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require rails-ujs
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require js-routes
+//= require search
 //= require_tree .
+
+
+$(function() {
+    $('.field_with_errors').addClass('has-error');
+});
+
+$(function() {
+    $('table').on('scroll', function() {
+        $("#" + this.id + " > *").width($(this).width() + $(this).scrollLeft());
+    });
+});

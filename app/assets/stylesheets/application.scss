@@ -1,0 +1,71 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+  background: asset_url('dota_backgrounds/498711.jpg')
+}
+
+html {
+  line-height: 25px;
+}
+table {
+  border-collapse: collapse;
+  width: 300px;
+  overflow-x: scroll;
+  display: block;
+  color: #DADADA;
+  padding: 15px;
+  border-color: #2E2F30;
+}
+
+thead, tbody {
+  display: block;
+}
+tbody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 240px;
+}
+td, th {
+  min-width: 100px;
+  height: 25px;
+  border: dashed 1px lightblue;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: rgba(46, 61, 70, 0.88);
+}
+
+.container.header-container {
+  background: none;
+}
+
+
+.thumbnail {
+  opacity: 0.95;
+  background: #171615;
+  border-radius: 0;
+  border-style: groove;
+  border-color: rgba(50, 168, 236, 0.5);
+}
+
+.thumbnail:hover {
+  transform: rotate(0deg) scale(1.1,1.1);
+  box-shadow: 2px 2px 0px rgba(50, 168, 236, 0.7);
+  z-index: 999;
+  transition: transform 300ms linear 0ms,
+  box-shadow 300ms linear 0ms, z-index 300ms linear 0ms;
+}
+
+h3 {
+  color: #b2b9b7;
+}
+
+p {
+  color: #7d7d7d;
+}

@@ -1,0 +1,2 @@
+class LogRegDump < ApplicationRecord
+end
