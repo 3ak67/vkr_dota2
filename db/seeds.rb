@@ -33,7 +33,7 @@ Hero.find_by(hero_id: 12).update(portrait: Pathname.new(Rails.root.join('app/ass
 Hero.find_by(hero_id: 13).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Puck_icon.png')).open)
 Hero.find_by(hero_id: 14).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Pudge_icon.png')).open)
 Hero.find_by(hero_id: 15).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Razor_icon.png')).open)
-Hero.find_by(hero_id: 16).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/and_King_icon.png')).open)
+Hero.find_by(hero_id: 16).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Sand_King_icon.png')).open)
 Hero.find_by(hero_id: 17).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Storm_Spirit_icon.png')).open)
 Hero.find_by(hero_id: 18).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Sven_icon.png')).open)
 Hero.find_by(hero_id: 19).update(portrait: Pathname.new(Rails.root.join('app/assets/images/dota_hero_icons/Tiny_icon.png')).open)
