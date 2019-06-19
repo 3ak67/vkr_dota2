@@ -8,6 +8,7 @@ rackup      DefaultRackup
 port        ENV['PORT']     || 3000
 environment ENV['RACK_ENV'] || 'development'
 
+timeout 80
 
 on_worker_boot do
   # Worker specific setup for Rails 4.1+
