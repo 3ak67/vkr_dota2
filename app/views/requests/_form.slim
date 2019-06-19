@@ -7,6 +7,6 @@
           - 4.times do |n|
             .form-group
               .col-md-5
-                = f.text_field "#{first_char + (n + 1).to_s}", class: 'form-control js-search-input', placeholder: "#{t} Hero #{n + 1}"
+                = f.text_field "#{first_char + (n + 1).to_s}", class: 'form-control js-search-input', type: 'number', min: 1, max: 120, placeholder: "#{t} Hero #{n + 1}", required: true
 
       = f.submit class: 'col-md-2 col-sm-offset-5 btn btn-primary'

@@ -15,5 +15,3 @@ class Request < ApplicationRecord
     [r1, r2, r3, r4, d1, d2, d3, d4].map { |i| i.to_i }
   end
 end
-
-
