@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -32,7 +32,7 @@ group :development do
   gem 'awesome_print'
   gem 'bullet'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'pry'
+  gem 'pry-byebug'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'

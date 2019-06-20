@@ -17,12 +17,11 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
-    @picked = Hero.where("hero_id IN (?)", @request.hero_pick_ids)
+    @picked = Hero.where(hero_id: @request.hero_pick_ids)
     @game_matrix = @request.build_matrix
-    @antagonistic_heroes = Hero.where("hero_id IN (?)", @game_matrix.available_heroes)
+    @antagonistic_heroes = Hero.where(hero_id: @game_matrix.available_heroes)
     # For best pick
-    @best_heroes = Hero.where("hero_id IN (?)", @game_matrix.best_pick.map { |i| i[:hero_id] })
-    # @best_heroes.map { |bh| bh.score = @game_matrix.best_pick[0].select}
+    @best_heroes = Hero.where(hero_id: @game_matrix.best_pick.map { |i| i[:hero_id] })
     @scores = @game_matrix.best_pick.map { |i| i[:score] }
   end
 

@@ -1,21 +1,22 @@
 class GameMatrix
-  CRITERIA = 0.5
+  CRITERIA = 0.58
 
   attr_accessor :available_heroes, :matrix, :picked_heroes, :best_pick
 
   def initialize(available_heroes, picked_heroes)
-    @heroes = Hero.all.map { |h| h.hero_id }
+    @heroes = Hero.all.map { |h| h.hero_id }.sort
     @available_heroes = available_heroes
     @picked_heroes = picked_heroes
     @matrix = []
     @best_pick = []
     build_strategy_matrix
-    best_8
+    @best_pick = best_8
     @matrix = Numo::DFloat.asarray(@matrix)
   end
 
   def best_8
-    @best_pick = @best_pick.max(8) { |a, b| a['score'].to_f <=> b['score'].to_f }
+    sorted_pick = @best_pick.sort_by { |p| p[:score] }
+    sorted_pick.max_by(12) { |p| p[:score] }
   end
 
   def build_strategy_matrix
